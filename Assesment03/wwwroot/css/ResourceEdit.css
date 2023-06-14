@@ -1,0 +1,19 @@
+﻿.row {
+    background-color: antiquewhite;
+    width: 50%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+table {
+    border-radius: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.table {
+    background-color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

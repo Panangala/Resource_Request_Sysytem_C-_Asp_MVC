@@ -1,0 +1,99 @@
+﻿@model Assesment03.Models.Request
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<link rel="stylesheet" href="~/css/RequestEdit.css" />
+<h1>Edit</h1>
+
+<h4>Requests</h4>
+<hr />
+<center>
+<div class="row">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <center><label>Stuent ID</label></center>
+                                <input asp-for="Student_ID" class="form-control" />
+                                <span asp-validation-for="Student_ID" class="text-danger"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <center><label>Student Name</label></center>
+                                <input asp-for="Student_Name" class="form-control" />
+                                <span asp-validation-for="Student_Name" class="text-danger"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <center><label>Student Email</label></center>
+                                <input asp-for="Student_Email" class="form-control" />
+                                <span asp-validation-for="Student_Email" class="text-danger"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <center><label>Unit Code</label></center>
+                                <input asp-for="Unit_Code" class="form-control" />
+                                <span asp-validation-for="Unit_Code" class="text-danger"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <center><label>Resource Name</label></center>
+                                <input asp-for="Resource_Name" class="form-control" />
+                                <span asp-validation-for="Resource_Name" class="text-danger"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <input type="submit" value="Save" class="btn btn-primary" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                </center>
+        </form>
+        
+    </div>
+</center>
+
+
+<div>
+    <a class=" btn btn-outline-info me-2" asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

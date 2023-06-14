@@ -1,0 +1,97 @@
+﻿@model Assesment03.Models.Rsource
+
+@{
+    ViewData["Title"] = "Create";
+}
+<link rel="stylesheet" href="~/css/Resource.css" />
+
+<h1>Create</h1>
+
+<h4>Rsource</h4>
+<hr />
+<center>
+<div class="row">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <center><label>Resource Id</label></center>
+                            <input asp-for="Resource_Id" class="form-control" />
+                            <span asp-validation-for="Resource_Id" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <center><label>Resource Name</label></center>
+                            <input asp-for="Resource_Name" class="form-control" />
+                            <span asp-validation-for="Resource_Name" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <center><label>Resource Description</label></center>
+                            <input asp-for="Resource_Description" class="form-control" />
+                            <span asp-validation-for="Resource_Description" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <center><label>Resource Sprcification</label></center>
+                            <input asp-for="Resource_Specification" class="form-control" />
+                            <span asp-validation-for="Resource_Specification" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <center><label>Resource Availability</label></center>
+                            <input asp-for="Resource_Availability" class="form-control" />
+                            <span asp-validation-for="Resource_Availability" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </center>
+
+    </form>
+</div>
+</center>
+<!--
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+-->
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

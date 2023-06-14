@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Assesment03.Models.Request>
+
+@{
+    
+}
+<link rel="stylesheet" href="~/css/Request.css" />
+
+<h1>Requests List</h1>
+<!--
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+-->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Student ID
+            </th>
+            <th>
+                Student Name
+            </th>
+            <th>
+                Student Email
+            </th>
+            <th>
+                Unit Code
+            </th>
+            <th>
+                Resource Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student_Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unit_Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resource_Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

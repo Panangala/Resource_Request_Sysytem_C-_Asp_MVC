@@ -1,0 +1,29 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/bg-img.png');
+}
+
+.Div1 {
+    
+    border-radius: 40px;
+    background-color: antiquewhite;
+    text-align: center;
+    margin-top: 200px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.Div2 {
+    border-radius: 40px;
+    background-color:aliceblue;
+    text-align: center;
+    margin-top: 200px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+

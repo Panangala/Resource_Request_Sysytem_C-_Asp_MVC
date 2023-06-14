@@ -1,0 +1,28 @@
+﻿@{
+}
+<link rel="stylesheet" href="~/css/Account.css" />
+
+
+@if (User.IsInRole("Student"))
+{
+                <center>
+                <div class="Div2">
+                    <h1 class="hedding" style="font-size:50px">
+                        Welcome <br/> 
+                            <h2>Student</h2>
+                    </h1>
+                </div>
+                </center>
+}
+@if (User.IsInRole("Admin"))
+{
+                    <center>
+                    <div class="Div2">
+                        <h1 class="hedding" style="font-size:50px">
+                            Welcome <br />
+                            <h2>Admin</h2>
+                        </h1>
+                    </div>
+                    </center>
+}
+
